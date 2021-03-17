@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Accordion from './components/accordion'
 
-function App() {
+const App = () => {
+  const items = [
+    {
+      title: 'What is React?',
+      content: 'React is a front end library.'
+    }, {
+      title: 'Why use React?',
+      content: 'React is a popular library among developers to do front end works.'
+    }, {
+      title: 'How to use React?',
+      content: 'You use React to create components.'
+    }
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui styled accordion">
+      <Accordion items={items} />
     </div>
   );
 }
